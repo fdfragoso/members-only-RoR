@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_22_150921) do
+ActiveRecord::Schema.define(version: 2020_09_24_132920) do
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type '' for column 'user'
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_09_22_150921) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

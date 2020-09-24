@@ -1,0 +1,53 @@
+<nav class="navbar is-success">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: 'navbar-item' do %>
+      <span class="icon has-text-info">
+      <i class="fab fa-twitter fa-2x"></i>
+      </span>
+    <% end %>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Tweets", posts_path, class: "navbar-item"%>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <%= link_to new_post_path, class: "bd-tw-button button is-info" do %>
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+            <span>
+              Tweet
+            </span>
+            <% end %>
+          </p>
+          <p class="control">
+            <%= link_to new_user_session_path, class: 'button is-warning' do %>
+              <span class="icon">
+              <i class="fas fa-user-plus"></i>
+              </span>
+              <span>Sign In</span>
+            <% end %>
+          </p>
+          <p class="control">
+            <%= link_to new_user_registration_path, class: 'button is-warning' do %>
+              <span class="icon">
+              <i class="fas fa-user-plus"></i>
+              </span>
+              <span>Sign Up</span>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
