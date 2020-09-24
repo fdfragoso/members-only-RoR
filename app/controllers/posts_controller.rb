@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
+    @post = Post.new
   end
 
   # GET /posts/1
@@ -26,10 +27,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    
+    @post.user = current_user
     if @post.save
       flash[:notice] = "Post successfully created.";
-      redirect_to post_path(@post)
+      redirect_to root_path
     else
       render :new
     end

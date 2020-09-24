@@ -15,3 +15,10 @@
  */
 //  $navbar-background-color: #07689f;
  @import "bulma";
+
+ .image {
+     border-radius: 50%;
+     img {
+         border-radius: 50%;
+     }
+ }

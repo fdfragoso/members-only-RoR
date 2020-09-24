@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_132920) do
+ActiveRecord::Schema.define(version: 2020_09_24_151632) do
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type '' for column 'user'

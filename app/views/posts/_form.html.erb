@@ -1,23 +1,10 @@
-<%= form_for(@post) do |form| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <div class="form-group">
-    <%= form.label :body %> <br>
-    <%= form.text_area :body%>
-    </div>
-    <div class="form-group">
-    <%= form.submit "Post" %>
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :body, label: "Tweet about it", input_html: { class: "textarea"}, wrapper: false, label_html: {class: 'label'}, placeholder: "Compose a new tweet ....", autofocus: true %>
+      <%= f.button :submit, class: "button is-info mt-2" %>
     </div>
   </div>
-<% end %>
+  <% end %>
+  
