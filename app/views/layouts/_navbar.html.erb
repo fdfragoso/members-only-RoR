@@ -20,8 +20,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
+        <% if !user_signed_in? %>
           <p class="control">
-            <%= link_to new_post_path, class: "bd-tw-button button is-info" do %>
+            <%= link_to new_post_path, class: "button is-link is-inverted" do %>
               <span class="icon">
                 <i class="fab fa-twitter"></i>
               </span>
@@ -31,21 +32,33 @@
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_session_path, class: 'button is-warning' do %>
+            <%= link_to new_user_session_path, class: 'button is-link is-outlined' do %>
               <span class="icon">
-              <i class="fas fa-user-plus"></i>
+              <i class="fas fa-sign-in-alt"></i>
               </span>
               <span>Sign In</span>
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_registration_path, class: 'button is-warning' do %>
+            <%= link_to new_user_registration_path, class: 'button is-link is-outlined' do %>
               <span class="icon">
               <i class="fas fa-user-plus"></i>
               </span>
               <span>Sign Up</span>
             <% end %>
           </p>
+          <% else %>
+          <p class="control">
+            <%= link_to current_user.name, edit_user_registration_path %>
+          </p>
+          <p class="control">
+            <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to logout?"} do %>
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            <% end %>
+          </p>
+
+          <% end %>
         </div>
       </div>
     </div>
