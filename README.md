@@ -1,6 +1,6 @@
 # RE-FORMER
 
-This is part of the Forms Project in [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms)’s Ruby on Rails Curriculum.
+This is part of the Authentication Project in [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)’s Ruby on Rails Curriculum.
 
 ## Required installations
 This app requires the following packages to be installed on you system:
@@ -14,7 +14,7 @@ To get this app ready to run, follow this steps:
 
 * clone this repo
 
-        pc:~$ git clone git@github.com:fdfragoso/forms-Ror.git
+        pc:~$ git clone git@github.com:fdfragoso/members-only-RoR.git
 
 * install require gems
 
@@ -26,7 +26,7 @@ To get this app ready to run, follow this steps:
 
 * Start the rails' server to test
 
-        pc:~$ rails server
+        pc:~$ rails server or rails s
 
 ## Author
 
