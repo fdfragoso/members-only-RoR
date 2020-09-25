@@ -1,4 +1,7 @@
 <div class="column is-half">
+  <% if !user_signed_in?%>
+  <h2 class="title is-2 has-text-centered	">Members can see who wrote it</h2>
+  <% end %>
 <% if user_signed_in? %>
   <article class="media box">
      <figure class="media-left">
@@ -14,15 +17,19 @@
 <% @posts.each do |tweet| %>
  <div class="box">
    <article class="media">
+    <% if user_signed_in? %>
      <div class="media-left">
        <figure class="image is_64x64">
        <%= gravatar_image_tag(tweet.user.email, size: 64, alt: tweet.user.name)%>
        </figure>
      </div>
+     <% end %>
      <div class="media-content">
        <div class="content">
+          <% if user_signed_in? %>
           <strong><%= tweet.user.name %></strong><br>
           <small>@<%= tweet.user.username %></small><br>
+          <% end %>
           <p>
             <%= tweet.body %>
           </p>
