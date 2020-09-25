@@ -1,7 +1,7 @@
 <nav class="navbar is-success">
   <div class="navbar-brand">
     <%= link_to root_path, class: 'navbar-item' do %>
-      <span class="icon has-text-info">
+      <span class="icon has-text-danger">
       <i class="fab fa-twitter fa-2x"></i>
       </span>
     <% end %>
@@ -23,7 +23,7 @@
         <% if !user_signed_in? %>
           <p class="control">
             <%= link_to new_post_path, class: "button is-link is-inverted" do %>
-              <span class="icon">
+              <span class="icon has-text-danger">
                 <i class="fab fa-twitter"></i>
               </span>
             <span>
@@ -32,7 +32,7 @@
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_session_path, class: 'button is-link is-outlined' do %>
+            <%= link_to new_user_session_path, class: 'button is-danger is-outlined' do %>
               <span class="icon">
               <i class="fas fa-sign-in-alt"></i>
               </span>
@@ -40,7 +40,7 @@
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_registration_path, class: 'button is-link is-outlined' do %>
+            <%= link_to new_user_registration_path, class: 'button is-danger is-outlined' do %>
               <span class="icon">
               <i class="fas fa-user-plus"></i>
               </span>
@@ -49,10 +49,13 @@
           </p>
           <% else %>
           <p class="control">
-            <%= link_to current_user.name, edit_user_registration_path %>
+            <%= link_to edit_user_registration_path, class: 'has-text-grey-darker' do%>
+              <i class="fas fa-user"></i>
+              <span><%= current_user.name %></span>
+            <% end %>
           </p>
           <p class="control">
-            <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to logout?"} do %>
+            <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: 'has-text-grey-darker' do %>
               <i class="fas fa-sign-out-alt"></i>
               <span>Logout</span>
             <% end %>
