@@ -14,15 +14,16 @@
  *= require_self
  */
 //  $navbar-background-color: #07689f;
- @import "bulma";
+@import "bulma";
 
 .image {
   border-radius: 50%;
-  img {
-    border-radius: 50%;
-    }
- }
 
-.notification:not(:last-child)  {
-    margin-bottom: 0;
- }
+  img {
+  border-radius: 50%;
+  }
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
