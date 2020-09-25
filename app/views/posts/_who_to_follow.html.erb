@@ -1,73 +1,26 @@
 <div class="column">
     <nav class="panel">
        <div class="panel-heading">Who to Follow</div>
+       <% @users.each do |user| %>
+        <% if user != current_user %>
         <div class="panel-block">
             <article class="media">
             <div class="media-left">
                 <figure class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/64x64.png">
+                <%= gravatar_image_tag(user.email, size: 64, alt: user.name) %>
                 </figure>
             </div>
             <div class="media-content">
                 <div class="content">
                     <p>
-                    <strong>Jhon Smith</strong>
-                    <small>@ju</small>
+                        <strong><%= user.name %></strong><br />
+                        <small>@<%= user.username %></small>
                     </p>
                 </div>
-            </div>
+           </div>
             </article>
         </div>
-        <div class="panel-block">
-            <article class="media">
-            <div class="media-left">
-                <figure class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/64x64.png">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                    <strong>Jhon Smith</strong>
-                    <small>@ju</small>
-                    </p>
-                </div>
-            </div>
-            </article>
-        </div>
-        <div class="panel-block">
-            <article class="media">
-            <div class="media-left">
-                <figure class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/64x64.png">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                    <strong>Jhon Smith</strong>
-                    <small>@ju</small>
-                    </p>
-                </div>
-            </div>
-            </article>
-        </div>
-        <div class="panel-block">
-            <article class="media">
-            <div class="media-left">
-                <figure class="image is-32x32">
-                <img src="https://bulma.io/images/placeholders/64x64.png">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                    <strong>Jhon Smith</strong>
-                    <small>@ju</small>
-                    </p>
-                </div>
-            </div>
-            </article>
-        </div>
+        <% end %>
+    <% end %>
     </nav>
 </div>

@@ -22,7 +22,7 @@
         <div class="field is-grouped">
         <% if !user_signed_in? %>
           <p class="control">
-            <%= link_to new_post_path, class: "button is-link is-inverted" do %>
+            <%= link_to new_post_path, class: "button is-link is-inverted has-text-grey-darker" do %>
               <span class="icon has-text-danger">
                 <i class="fab fa-twitter"></i>
               </span>
@@ -32,15 +32,15 @@
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_session_path, class: 'button is-danger is-outlined' do %>
-              <span class="icon">
+            <%= link_to new_user_session_path, class: 'button is-danger is-outlined has-text-grey-darker' do %>
+              <span class="icon has-text-grey-darker">
               <i class="fas fa-sign-in-alt"></i>
               </span>
               <span>Sign In</span>
             <% end %>
           </p>
           <p class="control">
-            <%= link_to new_user_registration_path, class: 'button is-danger is-outlined' do %>
+            <%= link_to new_user_registration_path, class: 'button is-danger is-outlined has-text-grey-darker' do %>
               <span class="icon">
               <i class="fas fa-user-plus"></i>
               </span>
