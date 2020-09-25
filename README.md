@@ -1,4 +1,4 @@
-# RE-FORMER
+# Member's Only
 
 This is part of the Authentication Project in [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)’s Ruby on Rails Curriculum.
 
