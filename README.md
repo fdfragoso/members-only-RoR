@@ -2,6 +2,8 @@
 
 This is part of the Authentication Project in [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)’s Ruby on Rails Curriculum.
 
+![screenshot](./app_screenshot.png)
+
 ## Required installations
 This app requires the following packages to be installed on you system:
 
@@ -19,7 +21,9 @@ To get this app ready to run, follow this steps:
 * install require gems
 
         pc:~$ bundle install
+* in case you need to run
 
+        pc:~$ yarn install --check-files
 * Run database migration
 
         pc:~$ rails db:migrate
